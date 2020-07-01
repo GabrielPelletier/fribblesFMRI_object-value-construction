@@ -6,12 +6,15 @@ The fribblesFMRI_object-value-construction project contains three datasets of in
   
 This repository contains:
 * Codes to anlayze Behaviour and Eye-Tracking for the Behavioural sample (Matlab)
+* Behavioural and Eye-Tracking data for the Behavioural sample
 * Codes to anlayze Behaviour and Eye-Tracking for the fMRI sample (Matlab)
+* Behavioural and Eye-Tracking data for the fMRI sample
 * Codes to anlayze fMRI data and power calculation for the fMRI-pilot sample (Matalb and FSL)
-* Codes to anlayze fMRI data for the fMRI sample (Matalb and FSL)  
+* Codes to anlayze fMRI data for the fMRI sample (Matalb and FSL)
   
-The raw fMRI data for the fMRI-pilot sample and the fMRI sample in BIDS format can be found at:
-* OpenNeuro [LINK]  
+The raw fMRI data in BIDS format can be found at:
+* OpenNeuro [LINK] for the fMRI-pilot sample
+* OpenNeuro [LINK] for the fMRI sample
   
 The Eye-tracking data for the Behavioural sample and the and fMRI sample can be found at:
 * ... [LINK]  
