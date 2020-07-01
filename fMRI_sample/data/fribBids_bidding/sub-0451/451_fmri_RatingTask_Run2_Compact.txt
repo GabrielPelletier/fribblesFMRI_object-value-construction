@@ -1,0 +1,1 @@
+SubjecNumber	run	trial	Stimulus	StimulusValue	Condition	Rating	RatingRT	StartSliderPosition	stimulusOnset	StimulusOffset	RatingScaleOnset	RatingScaleOffset
