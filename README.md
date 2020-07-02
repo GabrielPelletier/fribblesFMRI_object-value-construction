@@ -1,6 +1,8 @@
 # fribblesFMRI_object-value-construction
 ## Authors 
-Gabriel Peleltier, Nadav Aridan, Lesley K Fellows, Tom Schonberg
+Gabriel Peleltier  
+Nadav Aridan, Lesley K Fellows, Tom Schonberg  
+
 ## Details
 The fribblesFMRI_object-value-construction project contains three datasets of independent participants with the same experimental paradigm. One Behavioural sample, one fMRI-pilot sample and one fMRI sample.  
   
