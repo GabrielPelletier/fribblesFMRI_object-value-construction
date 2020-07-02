@@ -11,6 +11,8 @@ This repository contains:
 * Behavioural and Eye-Tracking data for the fMRI sample
 * Codes to anlayze fMRI data and power calculation for the fMRI-pilot sample (Matalb and FSL)
 * Codes to anlayze fMRI data for the fMRI sample : Fribbles_Bidding_Task and Functional_Localizer_Task fLOC (Matalb and FSL)
+* Experiment codes and stimuli for the Behavioural sample  
+* Experiment codes and stimuli for the fMRI sample  
   
 The raw fMRI data in BIDS format can be found at:
 * OpenNeuro [LINK] for the fMRI-pilot sample
@@ -20,6 +22,8 @@ The non peer-reviewed manuscript which presents these data analyzed with these c
 * [LINK]  
   
 Hypotheses, data collection plan and detailed analyses were pre-registered at:
-* Open Science Framework [project link osf.io/2jy6a] [pre-registration link osf.io/4d2yr]
+* Open Science Framework [project link osf.io/2jy6a] [pre-registration link osf.io/4d2yr]  
+  
+    
 
-...
+
