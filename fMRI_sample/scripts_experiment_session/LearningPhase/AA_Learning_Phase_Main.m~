@@ -1,0 +1,151 @@
+%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%=%%=%%=%%=%%=%%=%%=%%=%%=%%
+
+            % LEARNING PHASE OF THE FRIBBLES FMRI EXPERIMENT %      
+            
+                                %=%%=%%=% 
+                                
+%=%%=%%             Script by Gabriel Pelletier, 2017               %=%%=%%
+%                      (Last update Jan 10, 2018)                         %
+
+                                %=%%=%%=%    
+%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%=%%=%%=%%=%%=%%=%%=%%=%%=%%
+%%%%%                                                                 %%%%%    
+%                    %%% === Script structure === %%%                     % 
+%                   
+%         - Learning Conjunction Condition
+%               > Learning Block
+%               > Learning Probe
+%               > Repeat XX cycles
+%
+%         - Learning Single Attribute Condition
+%               > Learning Block
+%               > Learning Probe
+%               > Repeat XX cycles
+%     
+%          - Adapted to run on mac, Jan 2018
+%           
+%          - Modified in Jan 2018
+%               > Learning phase structure changed
+%               >
+%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%=%%=%%=%%=%%=%%=%%=%%=%%=%%
+%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%%=%=%%=%%=%%=%%=%%=%%=%%=%%=%%
+
+%Screen('Preference', 'VisualDebugLevel', 1);
+
+%% Subejct Information
+[subjectNumber] = subjectPrompt;
+
+% Order, for Stimulus-set and learning order
+if mod(str2num(subjectNumber),2) == 0 % If Subject number is Even
+    order = 1;
+else %if Subject number is Odd
+    order = 2;
+end
+
+% For now Order will always be 1
+    order = 1;
+    
+%% Experimental Parameters
+% Number of Learning Blocks for each learning Set
+learnBlocksNum = 3;
+feedback = 'off'; % Feedback in Learning Probe (binary choice)?
+
+%% Output Folder
+output = [pwd,'/Output/'];
+
+%% Define stimulus fodler
+
+% Assign stimulus sets depending on Order
+if order == 1
+    conjSetFolder = [pwd,'/Stimuli/LearningPhase/StimSet1/WholeObject/'];
+    sumSetFolder = [pwd,'/Stimuli/LearningPhase/StimSet2/SingleAttribute/'];
+elseif order == 2
+    conjSetFolder = [pwd,'/Stimuli/LearningPhase/StimSet2/WholeObject/'];
+    sumSetFolder = [pwd,'/Stimuli/LearningPhase/StimSet1/SingleAttribute/'];
+end
+
+%% General Instrtuctions
+%instruction_display('Slide2', 'Slide3');
+
+
+%%% Start of Learning Phase %%%
+
+%% Instruction before Summation (Single attribute learning) Condition   
+%instruction_display('', '');
+
+%% Single-Attriute Learning (Summation condition)
+condition = 'SingleAttribute';
+blockCount = 1; % Will add 1 each time a learning block is done (for data log)
+probeCount = 1;
+
+% Load the Stimulus-Value association Matrix
+load([sumSetFolder,'stimuliValue.mat']);
+load([sumSetFolder,'stimuliValueSum.mat']);
+sumSet = stimuliValueSum;
+
+% Sort the Stimulus-Value matrix in order of value
+stimuliValueSorted = sortrows(stimuliValue,2);
+
+% Divide the stimuli in 3 learning sets based on Attribute Highlighted 
+singSet1 = [{'Fa2_2121_X.jpg'},{7};{'Fa2_2122_X.jpg'},{21};{'Fa2_2123_X.jpg'},{28}];
+%singSet1 = stimuliValueSorted(contains(stimuliValueSorted(:,1),'X'),:);
+singSet2 = [{'Fa2_2122_Y.jpg'},{14};{'Fa2_2222_Y.jpg'},{21};{'Fa2_2322_Y.jpg'},{35}];
+%singSet2 = stimuliValueSorted(contains(stimuliValueSorted(:,1),'Y'),:);
+singFullSet = stimuliValueSorted;
+
+for i = 1 : learnBlocksNum
+    
+    % Learning Block 1
+    learning_block (subjectNumber, condition, sumSetFolder, output, singFullSet, 6, blockCount)
+    blockCount = blockCount + 1;
+
+end
+
+% Instructions before Learning Probe with Binary choices
+%instruction_display('', '');
+
+% Learning Probe; Binary choices
+learning_probe (subjectNumber, condition, sumSetFolder, output, sumSet, 1, probeCount, feedback)
+probeCount = probeCount + 1;
+
+
+%% Instructions Between 2 stimulus sets learning
+%instruction_display('', '');
+
+%% Conjunction Learning
+instruction_display('ConjSet1');
+sca;
+
+condition = 'Conjunction';
+blockCount = 1; % Will add each time a learning block is done (for data log)
+probeCount = 1;
+
+% Load the Stimulus-Value association Matrix
+load([conjSetFolder,'stimuliValue.mat']);
+
+% Sort the Stimulus-Value matrix in order of value
+stimuliValueSorted = sortrows(stimuliValue,2);
+
+% Divide the stimuli in 3 learning sets based on values
+conjSet1 = [stimuliValueSorted(1,:);stimuliValueSorted(3,:);stimuliValueSorted(5,:)];
+conjSet2 = [stimuliValueSorted(2,:);stimuliValueSorted(4,:);stimuliValueSorted(6,:)];
+conjFullSet = stimuliValueSorted;
+
+
+% Alternate Set1 and Set2 and Full Set
+for i = 1 : learnBlocksNum
+    
+    % Learning Block, Set 1
+    learning_block (subjectNumber, condition, conjSetFolder, output, conjFullSet, 6, blockCount)
+    blockCount = blockCount + 1;
+
+end
+
+% Learning probe
+learning_probe (subjectNumber, condition, conjSetFolder, output, conjFullSet, 1, probeCount, feedback)
+probeCount = probeCount + 1;
+
+%% Save and Quit
+fclose all;
+ShowCursor();
+sca;
