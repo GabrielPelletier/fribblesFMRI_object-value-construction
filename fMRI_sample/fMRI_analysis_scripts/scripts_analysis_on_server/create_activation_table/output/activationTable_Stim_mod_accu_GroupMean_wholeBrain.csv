@@ -1,0 +1,4 @@
+Contrast,Cluster,Region,Number_of_voxels_in_the_region,Cluster_size,X,Y,Z,Peak_Z_value,p
+Stim_mod_accu_GroupMean,1,L._Angular_Gyrus,20,77,-60,-58,40,4.840,0.00189
+,,L._Lateral_Occipital_Cortex_superior_division,12,,,,,,
+,2,L._Middle_Temporal_Gyrus_posterior_division,74,88,-70,-24,-16,4.280,0.000706

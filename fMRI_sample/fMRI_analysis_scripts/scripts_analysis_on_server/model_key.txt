@@ -1,0 +1,441 @@
+
+**************************************************************************
+**************************************************************************
+task-fLoc
+**************************************************************************
+=========================================================================
+model001
+==============
+EV1-cond001-faceBlocs_modul_1
+EV2-cond002-placeBlocs_modul_1
+EV3-cond003-objectBlocs_modul_1
+EV4-cond004-scrambledObjectBlocs_modul_1
+confounds_friston24
+
+cope1-EV3(1)>EV4(-1)
+cope2-EV1(1)>EV3(-1)
+cope3-EV2(1)>EV3(-1)
+
+**************************************************************************
+**************************************************************************
+task-fribBids
+**************************************************************************
+
+=========================================================================
+=========================================================================
+model001 
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-summationTrials_dur-3_modul-1
+Ev3-cond003_onset-ratingScale_dur-RT_modul-1
+counfounds_friston24
+
+cope1-EV1(1)>EV2(-1)
+cope2-EV2(1)<cond1(-1)
+cope3-EV3(2)>EV1(-1)_and_EV2(-1)
+
+=========================================================================
+=========================================================================
+model002
+==============
+NOTE-Junk; did not include unmodulated regressors
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-trueValue
+EV2-cond001_onset-summationTrials_dur-3_modul-trueValue
+EV3-cond003_onset-ratingScale_dur-RT_modul-1
+counfounds_friston24
+
+cope1-EV1(1)> 0
+cope2-EV2(1)> 0
+cope3-EV3(1)> 0
+
+=========================================================================
+=========================================================================
+model003
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScale_dur-RT_modul-1
+EV6-cond006_onset-ratingScale_dur-RT_modul-abs(ratedValue)
+counfounds_friston24
+
+cope1-EV1(1) > EV3(-1)
+cope2-EV3(1) > EV1(-1)
+cope3-EV2(1) > 0
+cope4-EV4(1) > 0
+cope5-EV5(1) > 0
+cope6-EV6(1) > 0
+cope7-EV5(2) > EV1(-1) & EV3(-1)
+
+=========================================================================
+=========================================================================
+model004
+==============
+note-Same as model003, Adding Future Motor Activity DURING stim presentation
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScale_dur-RT_modul-1
+EV6-cond006_onset-ratingScale_dur-RT_modul-abs(ratedValue)
+EV7-cond007_onset-stimulus_dur-3_modul-abs(ratedValue)
+counfounds_friston24
+
+cope1-EV1(1) > EV3(-1)
+cope2-EV3(1) > EV1(-1)
+cope3-EV2(1) > 0
+cope4-EV4(1) > 0
+cope5-EV5(1) > 0
+cope6-EV6(1) > 0
+cope7-EV5(2) > EV1(-1) & EV3(-1)
+cope8-EV7(1) > 0
+
+=========================================================================
+=========================================================================
+model005
+==============
+note: Pre-registered model. Model used for analysis of PilotSample and power/sample-size calculations
+note: includes patametric modulation of value in both conditions
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-RT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-RT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-RT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-RT_modul-ratedValue
+
+cope1-EV1(1) > EV3(-1)
+cope2-EV3(1) > EV1(-1)
+cope3-EV2(1) > 0
+cope4-EV4(1) > 0
+cope5-EV2(1) > EV4(-1)
+cope6-EV4(1) > EV2(-1)
+cope7-EV5(1) & EV7(1) > EV1(-1) & EV3(-1)
+cope8-EV6(1) > 0
+cope9-EV8(1) > 0
+cope10-EV6(1) > EV8(-1)
+cope11-EV8(1) > EV6(-1)
+
+=========================================================================
+=========================================================================
+model005-ppi
+==============
+note: This is a PPI model based on model005. It includes all regressors from model005, plus one regressor for the seed time-series and two PPI regressors.
+note: A separate model is estimated for each seed ROI.
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-RT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-RT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-RT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-RT_modul-ratedValue
+EV9-cond009_seed-timeseries
+EV10-cond010_PPI-regressor-Conjunction-trials
+EV11-cond011_PPI-regressor-Summation-trials
+
+cope1-EV10(1) > 0
+cope2-EV11(1) > 0
+cope3-EV10(1) > EV11(-1)
+cope4-EV11(1) > EV10(-1)
+
+=========================================================================
+=========================================================================
+model006
+==============
+note: value modelled as categorical (high- and low-value trials)
+==============
+EV1-cond001_onset-conjunctionTrials-HighVal_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials-LowVal_dur-3_modul-modul-1
+EV3-cond003_onset-summationTrial-HighVal_dur-3_modul-1
+EV4-cond004_onset-summationTrial-LowVal_dur-3_modul-1
+EV5-cond005_onset-ratingScaleConj_dur-RT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-RT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-RT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-RT_modul-ratedValue
+
+cope1-EV1(1) & EV2(1) > EV3(-1) & EV4(-1)
+cope2-EV3(1) & EV4(1) > EV1(-1) & EV2(-1)
+cope3-EV1(1) > EV2(-1)
+cope4-EV2(1) > EV1(-1)
+cope5-EV3(1) > EV4(-1)
+cope6-EV4(1) > EV3(-1)
+cope7-EV1(1) & EV3(1) > EV2(-1) & EV4(-1)
+cope8-EV2(1) & EV4(1) > EV1(-1) & EV3(-1)
+cope9-EV6(1) > 0
+cope10-EV8(1) > 0
+cope11-EV6(1) > EV8(-1)
+cope12-EV8(1) > EV6(-1)
+cope13-EV5(1) & EV7(1) > EV1(-1) & EV2(-1) & EV3(-1) & EV4(-1)
+cope14-EV1(1) & EV2(1) & EV3(1) & EV4(1) > EV5(-1) & EV7(-1)
+
+=========================================================================
+=========================================================================
+model007
+==============
+note: Same as Model005 but modelling the abs(RatedValue)  instead of the RatedValue during the Rating Epoch.
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-RT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-RT_modul-abs(ratedValue)
+EV7-cond007_onset-ratingScaleSumm_dur-RT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-RT_modul-abs(ratedValue)
+counfounds_friston24
+
+cope1-EV1(1) > EV3(-1)
+cope2-EV3(1) > EV1(-1)
+cope3-EV2(1) > 0
+cope4-EV4(1) > 0
+cope5-EV2(1) > EV4(-1)
+cope6-EV4(1) > EV2(-1)
+cope7-EV5(1) & EV7(1) > EV1(-1) & EV3(-1)
+cope8-EV6(1) > 0
+cope9-EV8(1) > 0
+cope10-EV6(1) > EV8(-1)
+cope11-EV8(1) > EV6(-1)
+
+=========================================================================
+=========================================================================
+model010
+==============
+note: Same as model005 but ...
+note: 1) Accounting for rating RT the "right" way
+note: 2) Modelling the deviation from the true value (accuracy)
+note: This is the model used to generate the Results presented at SNE2019
+note: (Poster by Pelletier, Aridan, Fellow & Schonberg)
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-GroupMeanRT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-GroupMeanRT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-GroupMeanRT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-GroupMeanRT_modul-ratedValue
+EV9-cond009_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-trial_RT          
+EV10-cond010_onset-StimulusTrials_dur-3_modul-abs(TrueValue-RatedValue)
+
+counfounds_friston24
+
+cope1-EV1(1) > EV3(-1)
+cope2-EV3(1) > EV1(-1)
+cope3-EV2(1) > 0
+cope4-EV4(1) > 0
+cope5-EV2(1) > EV4(-1)
+cope6-EV4(1) > EV2(-1) !This is not the case, there is an error for that one
+cope7-EV5(1) & EV7(1) > EV1(-1) & EV3(-1)
+cope8-EV6(1) > 0
+cope9-EV8(1) > 0
+cope10-EV6(1) > EV8(-1)
+cope11-EV8(1) > EV6(-1)
+cope12-EV5(1) > EV7(-1)
+cope13-EV9(1) > 0 
+cope14-EV10(1) > 0
+
+=========================================================================
+=========================================================================
+model011
+==============
+note: Exploratory model trying other time-windows to detect value signal
+note: Same as model010 but ...
+note: 1) Using a 7-s time window after stimulus onset for analysis.
+note: = 3s stimulus presentation + 4s fixation cross
+note: 3) Fixed cope6
+
+=========================================================================
+=========================================================================
+model012
+==============
+note: Exploratory model trying other time-windows to detect value signal
+note: Same as model010 but ...
+note: 1) Using a 4-s time window Post-Stimulus presentation for analysis.
+note: = from [StimOnset + 3s] until [StimOnset + 7s] (this is fixation cross)
+note: 3 regressors were added to model this.
+
+EV1-cond001_onset-ConTrialsPostStim_dur-4_modul-1
+EV2-cond002_onset-ConTrialsPostStim_dur-4_modul-ratedValue
+EV3-cond003_onset-SumTrialsPostStim_dur-4_modul-1
+EV4-cond004_onset-SumTrialsPostStim_dur-4_modul-ratedValue
+EV5-cond005_onset-ConTrialsRating_dur-GroupMeanRT_modul-1
+EV6-cond006_onset-ConTrialsRating_dur-GroupMeanRT_modul-ratedValue
+EV7-cond007_onset-SumTrialsRating_dur-GroupMeanRT_modul-1
+EV8-cond008_onset-SumTrialsRating_dur-GroupMeanRT_modul-ratedValue
+EV9-cond009_onset-AllTrialsRating_dur-GroupMeanRT_modul-trial_RT   
+EV10-cond010_onset-AllTrialsPostStim_dur-3_modul-abs(TrueValue-RatedValue)
+EV11-cond011_onset-ConTrialsStim_dur-3_modul-1
+EV12-cond012_onset-SumTrialsStim_dur-3_modul-1
+EV13-cond010_onset-AllTrialsRating_dur-GroupMeanRT_modul-abs(TrueValue-RatedValue)
+
+COPE1- EV1 > EV3 (CON-PostStim > ELE-PostStim)
+COPE2- EV3 > EV1 (ELE-PostStim > CON-PostStim)
+COPE3- EV2 > 0 (CON-PostStim-Value)
+COPE4- EV4 > 0 (CON-PostStim-Value)
+COPE5- EV2 > EV4 (CON-Value-PostStim > SUM-Value-PostStim)
+COPE6- EV4 > EV2 (SUM-Value-PostStim > CON-Value-PostStim)
+COPE7- EV5 & EV7 > EV1 & EV3 (Rating > PostStim)
+COPE8- EV6 > 0 (CON-Value-Rate > Baseline)
+COPE9- EV8 > 0 (SUM-Value-Rate > Baseline)
+COPE10- EV6 > EV8 (CON-Value-Rate > SUM-Value-Rate)
+COPE11- EV8 > EV6 (SUM-Value-Rate > CON-Value-Rate)
+COPE12- EV5 > EV7 (CON-Rate > SUM-Rate)
+COPE13- EV9 > 0 (RT-Nuisance-Rate > Baseline)
+COPE14- EV10 > 0 (Accuracy-Nuisance-PostStim > Baseline)
+COPE15- EV11 > 0 (CON-Stim > Baseline)
+COPE16- EV12 > 0 (SUM-Stim > Baseline)
+COPE17- EV1 > 0 (CON-PostStim > Baseline)
+COPE18- EV3 > 0 (SUM-PostStim > Baseline)
+COPE19- EV11 > EV12(CON-Stim > SUM-Stim)
+COPE20- EV13 > 0(Accuracy-Nuisance-Rating > Baseline)
+COPE21- EV1 & EV3 > EV11 & EV12(PostStim > Stim)
+COPE22- EV5 > 0 (CON-Rate > Baseline)
+COPE23- EV7 > 0 (SUM-Rate > Baseline)
+COPE24- EV11 & EV12 > EV5 & EV7 (Stim > Rating)
+
+=========================================================================
+=========================================================================
+model013
+==============
+note: Same as model010 but ...
+note: 1) Modelliong Accuracy Nuisance regressor during Rating time too (not only during stimulus presentation)
+note: 2) Adding all the simpler EV > 0 constrasts, and re-arrangin contrasts so their orded and num make sense.
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-GroupMeanRT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-GroupMeanRT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-GroupMeanRT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-GroupMeanRT_modul-ratedValue
+EV9-cond009_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-trial_RT          
+EV10-cond010_onset-StimulusAllTrials_dur-3_modul-abs(TrueValue-RatedValue)
+EV11-cond011_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-abs(TrueValue-RatedValue)
+
+counfounds_friston24
+
+COPE1- EV1(1) > 0
+COPE2- EV2(1) > 0
+COPE3- EV3(1) > 0
+COPE4- EV4(1) > 0
+COPE5- EV5(1) > 0
+COPE6- EV6(1) > 0
+COPE7- EV7(1) > 0
+COPE8- EV8(1) > 0
+COPE9- EV9(1) > 0
+COPE10- EV10(1) > 0
+COPE11- EV11(1) > 0
+COPE12- EV1(1) > EV3(-1)
+COPE13- EV2(1) > EV4(-1)
+COPE14- EV5(1) & EV7(1) > EV1(-1) & EV3(-1)
+COPE15- EV6(1) > EV8(-1)
+COPE16- EV5(1) > EV7(-1)
+
+=========================================================================
+model014-ppi
+==============
+note: gPPI model based on model013, with vmPFC seed from model013
+note: Modelling Connectivity at the Time of RATING
+note: Same regressors as model013 + vmPFC seed time series + Configural PPI regressor + Elemental PPI regressor
+==============
+
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-GroupMeanRT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-GroupMeanRT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-GroupMeanRT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-GroupMeanRT_modul-ratedValue
+EV9-cond009_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-trial_RT          
+EV10-cond010_onset-StimulusAllTrials_dur-3_modul-abs(TrueValue-RatedValue)
+EV11-cond011_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-abs(TrueValue-RatedValue)
+EV12-cond012_seed-vmpfc-timeseries
+EV13-cond013_ppi-configural-rating
+EV14-cond014_ppi-elemental-rating
+
+counfounds_friston24
+
+COPE1- EV13(1) > 0
+COPE2- EV14(1) > 0
+COPE3- EV13(1) > EV14(-1)
+
+=========================================================================
+model015-ppi
+==============
+note: gPPI model based on model013, with vmPFC seed from model013
+note: Modelling Connectivity at the Time of STIMULUS PRESENTATION
+note: Same regressors as model013 + vmPFC seed time series + Configural PPI regressor + Elemental PPI regressor
+==============
+
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-GroupMeanRT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-GroupMeanRT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-GroupMeanRT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-GroupMeanRT_modul-ratedValue
+EV9-cond009_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-trial_RT          
+EV10-cond010_onset-StimulusAllTrials_dur-3_modul-abs(TrueValue-RatedValue)
+EV11-cond011_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-abs(TrueValue-RatedValue)
+EV12-cond012_seed-vmpfc-timeseries
+EV13-cond013_ppi-configural-stimulus
+EV14-cond014_ppi-elemental-stimulus
+
+counfounds_friston24
+
+COPE1- EV13(1) > 0
+COPE2- EV14(1) > 0
+COPE3- EV13(1) > EV14(-1)
+
+
+=========================================================================
+=========================================================================
+model017
+==============
+note: Same as model013 but ...
+note: With 2 additional regressors for the Eye Tracking variables (number of Transitions and Number of Fixations)
+
+==============
+EV1-cond001_onset-conjunctionTrials_dur-3_modul-1
+EV2-cond002_onset-conjunctionTrials_dur-3_modul-ratedValue
+EV3-cond003_onset-summationTrial_dur-3_modul-1
+EV4-cond004_onset-summationTrial_dur-3_modul-ratedValue
+EV5-cond005_onset-ratingScaleConj_dur-GroupMeanRT_modul-1
+EV6-cond006_onset-ratingScaleConj_dur-GroupMeanRT_modul-ratedValue
+EV7-cond007_onset-ratingScaleSumm_dur-GroupMeanRT_modul-1
+EV8-cond008_onset-ratingScaleSumm_dur-GroupMeanRT_modul-ratedValue
+EV9-cond009_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-trial_RT          
+EV10-cond010_onset-StimulusAllTrials_dur-3_modul-abs(TrueValue-RatedValue)
+EV11-cond011_onset-RatingScaleAllTrials_dur-GroupMeanRT_modul-abs(TrueValue-RatedValue)
+EV12-cond012_onset-StimulusAllTrials_dur-3_modul-eyeTracking-numberTransitions(meanCentered)
+EV13-cond013_onset-StimulusAllTrials_dur-3_modul-eyeTracking-numberFixations(meanCentered)
+
+counfounds_friston24
+
+COPE1- EV1(1) > 0
+COPE2- EV2(1) > 0
+COPE3- EV3(1) > 0
+COPE4- EV4(1) > 0
+COPE5- EV5(1) > 0
+COPE6- EV6(1) > 0
+COPE7- EV7(1) > 0
+COPE8- EV8(1) > 0
+COPE9- EV9(1) > 0
+COPE10- EV10(1) > 0
+COPE11- EV11(1) > 0
+COPE12- EV1(1) > EV3(-1)
+COPE13- EV2(1) > EV4(-1)
+COPE14- EV5(1) & EV7(1) > EV1(-1) & EV3(-1)
+COPE15- EV6(1) > EV8(-1)
+COPE16- EV5(1) > EV7(-1)
+COPE17- EV12(1) > 0
+COPE18- EV13(1) > 0

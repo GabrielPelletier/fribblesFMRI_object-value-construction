@@ -1,0 +1,10 @@
+% cond001.txt = conjunction trials: Onset Of stimulus // Duration of stimulus presentation // 1 (unmodulated)
+% cond002.txt = conjunction trials: Onset Of stimulus // Duration of stimulus presentation // RATED value
+% cond003.txt = summation trials: Onset Of stimulus // Duration of stimulus presentation // 1 (unmodulated)
+% cond004.txt = summation trials: Onset Of stimulus // Duration of stimulus presentation // RATED value
+% cond005.txt = Rating Scale: Onset of scale Conjunction trials // duration = MeanGroupRT // 1 (unmodulated)
+% cond006.txt = Rating Scale: Onset of scale Conjunction trials// duration = MeanGroupRT // RATED value
+% cond007.txt = Rating Scale: Onset of scale Summation trials // duration = MeanGroupRT // 1 (unmodulated)
+% cond008.txt = Rating Scale: Onset of scale Summation trials// duration = MeanGroupRT // RATED value
+% cond009.txt (Nuisance) = Rating Scale: Onset of scale All Trials // duration = MeanGroupRT // Trial RT
+% cond010.txt (Nuisance) = Onset of Stimulus All trials // Duration = stimulus duration // abs(Rated Value - True Value)

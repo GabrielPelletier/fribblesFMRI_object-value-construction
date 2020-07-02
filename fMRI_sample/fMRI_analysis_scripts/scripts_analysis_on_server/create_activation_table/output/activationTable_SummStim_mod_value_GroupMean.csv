@@ -1,0 +1,3 @@
+Contrast,Cluster,Region,Number_of_voxels_in_the_region,Cluster_size,X,Y,Z,Peak_Z_value,p
+SummStim_mod_value_GroupMean,1,L._Postcentral_Gyrus,40,56,-36,-22,64,4.150,0.0231
+,,L._Precentral_Gyrus,16,,,,,,

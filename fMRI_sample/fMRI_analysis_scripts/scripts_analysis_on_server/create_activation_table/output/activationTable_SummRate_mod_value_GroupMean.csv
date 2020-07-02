@@ -1,0 +1,11 @@
+Contrast,Cluster,Region,Number_of_voxels_in_the_region,Cluster_size,X,Y,Z,Peak_Z_value,p
+SummRate_mod_value_GroupMean,1,R._Occipital_Pole,116,117,28,-94,2,4.550,0.000178
+,2,L._Postcentral_Gyrus,157,205,-44,-26,62,5.120,5.36e-07
+,,L._Precentral_Gyrus,32,,,,,,
+,3,L._Lateral_Occipital_Cortex_inferior_division,171,237,-48,-78,18,4.750,5.96e-08
+,,L._Lateral_Occipital_Cortex_superior_division,38,,,,,,
+,4,L._Occipital_Fusiform_Gyrus,166,242,-16,-84,-10,4.620,5.96e-08
+,,L._Occipital_Pole,23,,,,,,
+,,L._Lingual_Gyrus,16,,,,,,
+,5,L._Lateral_Occipital_Cortex_superior_division,281,411,-24,-86,34,4.690,9.17e-12
+,,L._Occipital_Pole,59,,,,,,

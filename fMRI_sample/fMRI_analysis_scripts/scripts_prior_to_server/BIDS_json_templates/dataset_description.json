@@ -1,0 +1,24 @@
+{
+    "Name": "fribbles_fmri",
+    "BIDSVersion": "1.0.2",
+    "License": "",
+    "Authors": [
+        "Gabriel Pelletier",
+        "Nadav Aridan",
+        "Tom Schonberg",
+        "Lesley K Fellows"
+    ],
+    "Acknowledgements": "",
+    "HowToAcknowledge": "",
+    "Funding": [
+        "",
+        "",
+        ""
+    ],
+    "ReferencesAndLinks": [
+        "",
+        "",
+        ""
+    ],
+    "DatasetDOI": ""
+}

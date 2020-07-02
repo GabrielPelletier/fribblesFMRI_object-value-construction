@@ -1,0 +1,4 @@
+task-fLoc cond001 faces
+task-fLoc cond002 places
+task-fLoc cond003 objects
+task-fLoc cond004 scrambled_objects

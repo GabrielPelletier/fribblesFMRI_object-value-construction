@@ -1,0 +1,8 @@
+Contrast,Cluster,Region,Number_of_voxels_in_the_region,Cluster_size,X,Y,Z,Peak_Z_value,p
+ConjStim-SummStim_GroupMeanInverse,1,R._Precentral_Gyrus,67,67,54,-2,40,5.200,0.0142
+,2,L._Juxtapositional_Lobule_Cortex_(formerly_Supplementary_Motor_Cortex),174,219,-6,2,64,6.160,6.56e-07
+,,L._Superior_Frontal_Gyrus,19,,,,,,
+,3,L._Precentral_Gyrus,185,288,-64,8,22,5.290,1.63e-08
+,,L._Inferior_Frontal_Gyrus_pars_opercularis,19,,,,,,
+,4,L._Precentral_Gyrus,372,505,-56,-4,38,5.520,7.42e-13
+,,L._Postcentral_Gyrus,16,,,,,,

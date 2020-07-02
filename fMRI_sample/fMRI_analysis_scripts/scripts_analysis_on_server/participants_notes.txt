@@ -1,0 +1,87 @@
+==========================================================================
+**************************************************************************
+==========================================================================
+
+Notes regarding participants exclusions
+
+** fribbles_fMRI **
+** 2019 **
+
+==========================================================================
+**************************************************************************
+==========================================================================
+
+Last Update:
+Septebmer 23 2019
+==========================================================================
+
+SUMMARY:
+> 57 participants were scanned
+
+> 1 participant did not complete the fribBids fMRI task
+> 4 participants were excluded due to MRI artefacts
+> 9 participants were excluded due to poor behavior
+>> A total of 14 participants were excluded (24%)
+
+> The final sample contains 43 valid participants. Only the 42 first 
+participants are included in the group analysis, as per the pre-registered
+sample-size.
+
+==========================================================================
+
+.........................................................................
+PARTICIPANTS after EXCLUSIONS:
+.........................................................................
+participants = [0309 0311 0402 0403 0405 0406 0407 0408 0410 0411 ...
+                0412 0413 0414 0415 0417 0418 0419 0421 0422 0428 0429 ...
+                0430 0431 0432 0433 0434 0435 0436 0437 0438 0439 0440 ...
+                0441 0444 0445 0446 0447 0448 0449 0450 0452 0453 (0454)];
+
+.........................................................................
+ALL PARTICIPANTS:
+.........................................................................
+participants = [0309 0310 0311 0401 0402 0403 0404 0405 0406 0407 0408 ...
+          0409 0410 0411 0412 0413 0414 0415 0416 0417 0418 0419 0420 ...
+          0421 0422 0423 0424 0425 0426 0427 0428 0429 0430 0431 0432 ...
+          0433 0434 0435 0436 0437 0438 0439 0440 0441 0442 0443 0444 ...
+          0445 0446 0447 0448 0449 0450 0451 0452 0453 0454];
+
+.........................................................................
+EXCLUSIONS because of MRI ARTEFACTS:
+.........................................................................
+> 0401 (T1 motion artefact)
+> 0404 (Alising artefact)
+> 0420 (Alising artefact)
+> 0423 (No artefact. Session not completed due to distress button press)
+> 0442 (Could not reach ACPC -30 degrees, it exceeded 45 degrees)
+
+.........................................................................
+EXCLUSIONS because of BEHAVIOR:
+.........................................................................
+> 0310 (Issue with Elemental-Summation)
+> 0401 (Poor general accuracy, random responses)
+> 0404 (Issue with Elemental condition)
+> 0409 (Very good accuracy except for one mixed-up Configural stimulus)
+> 0416 (Very good accuracy except for two mixed-up Configural stimuli)
+> 0424 (Poor general accuracy, random responses)
+> 0425 (Poor general accuracy, random responses)
+> 0426 (Did not sum-up attributes in the Elemental condition)
+> 0427 (Did not sum-up attributes in the Elemental condition)
+> 0442 (Did badly in the Elemental condition)
+> 0443 (Did not learn the Configural condition)
+> 0451 (Learned and Bid accurately, but fell asleep 3 times in the scanner)
+
+.........................................................................
+Missing fLoc data:
+.........................................................................
+note: This does not prevent us rom including these participants in the
+note: fribBids analysis overall, but these subjects cannot be included 
+note: in the visual ROI analyses.
+> 0405 (fLoc data not collected)
+> 0420 (Excluded from fribBids anyway)
+> 0423 (Excluded from fribBids anyway)
+> 0424 (Excluded from fribBids anyway)
+> 0448 (fLoc data not collected)
+> 0451 (Excluded from fribBids anyway)
+
+==========================================================================

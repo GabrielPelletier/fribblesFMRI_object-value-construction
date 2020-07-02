@@ -1,0 +1,24 @@
+Notes on ROIs
+
+LOC - Lateral Occipital complex
+> Created using the HarvardOxford Lateral Occipital Complex-anterior division
+> Binarized wtihout thresholding.
+> Finding the subject's peak activity for the contrast Object>Srambled objects within this Atlas-ROI; finding one peak for each hemipshere.
+> Draw a 10mm sphere around each peak
+
+PPA - Parahippocampal place area
+> Created using the HarvardOxford Parrahipocampal gyrus, Posterior & Anterior divisions
+> Binarized wtihout thresholding.
+> Finding the subject's peak activity for the contrast Places>Objects within this Atlas-ROI; finding one peak for each hemipshere.
+> Draw a 10mm sphere around each peak
+
+FFA - Fusiform Face Area
+> Created using the HarvardOxford Temporal Occipital Fusiform Cortex
+> Binarized wtihout thresholding
+> Finding the subject's peak activity for the contrast Faces>Objects within this Atlas-ROI; finding one peak for each hemipshere.
+> Draw a 10mm sphere around each peak
+
+PRC
+> Not from Visual Localizer.
+> From J. Delvin's 2007 paper's probabilistic mask.
+> Thresholded at > 30 percent, as in M. Barense's work

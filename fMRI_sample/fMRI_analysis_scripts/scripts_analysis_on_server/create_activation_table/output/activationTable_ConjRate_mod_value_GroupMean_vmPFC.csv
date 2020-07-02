@@ -1,0 +1,6 @@
+Contrast,Cluster,Region,Number_of_voxels_in_the_region,Cluster_size,X,Y,Z,Peak_Z_value,p
+ConjRate_mod_value_GroupMean,1,L._Subcallosal_Cortex,8,15,-4,30,-26,3.780,0.0376
+,,L._Frontal_Medial_Cortex,6,,,,,,
+,2,R._Frontal_Pole,13,17,2,60,-10,3.720,0.0283
+,3,L._Frontal_Medial_Cortex,12,18,0,40,-26,3.940,0.0247
+,,R._Frontal_Medial_Cortex,6,,,,,,

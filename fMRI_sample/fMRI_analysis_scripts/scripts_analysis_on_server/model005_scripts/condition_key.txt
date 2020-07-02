@@ -1,0 +1,8 @@
+% cond001.txt = conjunction trials: Onset Of stimulus // Duration of stimulus presentation // 1 (unmodulated)
+% cond002.txt = conjunction trials: Onset Of stimulus // Duration of stimulus presentation // RATED value
+% cond003.txt = summation trials: Onset Of stimulus // Duration of stimulus presentation // 1 (unmodulated)
+% cond004.txt = summation trials: Onset Of stimulus // Duration of stimulus presentation // RATED value
+% cond005.txt (Of No Interest) = Rating Scale: Onset of scale Conjunction trials // duration = Reaction Time // 1 (unmodulated)
+% cond006.txt (Of No Interest) = Rating Scale: Onset of scale Conjunction trials// duration = Reaction Time // abs(RATED value)
+% cond007.txt (Of No Interest) = Rating Scale: Onset of scale Summation trials // duration = Reaction Time // 1 (unmodulated)
+% cond008.txt (Of No Interest) = Rating Scale: Onset of scale Summation trials// duration = Reaction Time // abs(RATED value)
