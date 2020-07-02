@@ -26,6 +26,7 @@ The non peer-reviewed manuscript which presents these data analyzed with these c
 Hypotheses, data collection plan and detailed analyses were pre-registered at:
 * Open Science Framework [project link osf.io/2jy6a] [pre-registration link osf.io/4d2yr]  
   
-    
-
+Thresholded and un-thresholded statistical brain maps resulting from the fMRI analysis scripts provided here are available at:  
+* Neurovault https://neurovault.org/collections/MXWQPPCW/  
+  
 
