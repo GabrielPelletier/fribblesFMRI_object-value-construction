@@ -1,6 +1,6 @@
 # fribblesFMRI_object-value-construction
 ## Authors 
-Gabriel Peleltier  
+Gabriel Pelletier,  
 Nadav Aridan, Lesley K Fellows, Tom Schonberg  
 
 ## Details
